@@ -177,6 +177,7 @@ VERSION:	1.0.0
 /* 1.1 typography */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600,700|Work+Sans:400,500,600");
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -210,6 +211,7 @@ h1,
 }
 
 @media (max-width: 400px) {
+
     h1,
     .h1 {
         font-size: 30px;
@@ -986,6 +988,7 @@ button {
         top: 24px;
         background: none;
     }
+
     .navigation .navbar-brand img {
         height: 50px;
         width: auto;
@@ -1137,6 +1140,7 @@ button {
     .navigation .navbar .dropdown-item {
         text-align: center;
     }
+
     .navigation .navbar .dropdown-item::before {
         display: none;
     }
@@ -1227,6 +1231,9 @@ button {
     background-position: center center;
     background-size: cover;
     outline: 0;
+    min-height: 100vh;
+    position: relative;
+    
 }
 
 .hero-slider .prevArrow,
@@ -1248,9 +1255,19 @@ button {
 }
 
 @media (max-width: 575px) {
+    .hero-slider-item{
+        min-height: 30vh;
+    }
     .hero-slider .prevArrow,
     .hero-slider .nextArrow {
         display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-slider-item{
+        width: fit-content;
+        max-height: 40vh;
     }
 }
 
@@ -1316,7 +1333,7 @@ button {
 
 @media (max-width: 575px) {
     .hero-slider .slick-dots li {
-        width: 25%;
+        width: 15%;
     }
 }
 
@@ -1369,7 +1386,7 @@ button {
 
 @media (max-width: 991px) {
     .hero-slider .slick-dots li a span {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
@@ -1469,6 +1486,7 @@ button {
 }
 
 @media (max-width: 767px) {
+
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
